@@ -1,0 +1,113 @@
+[global_config]
+  always_on_top = True
+  always_split_with_profile = True
+  enabled_plugins = CustomCommandsMenu, InactivityWatch, TestPlugin, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, MavenPluginURLHandler, LaunchpadBugURLHandler
+  hide_from_taskbar = True
+  hide_on_lose_focus = True
+  sticky = True
+  title_font = DejaVu Sans Mono Bold 11
+  title_hide_sizetext = True
+  title_receive_fg_color = "#e1e1e1"
+  title_transmit_fg_color = "#d6d6d6"
+  title_use_system_font = False
+  window_state = fullscreen
+[keybindings]
+  close_term = <Primary>d
+  cycle_next = <Shift>Page_Down
+  cycle_prev = <Primary><Shift>Page_Up
+  go_down = <Primary><Shift>Down
+  go_left = <Primary><Shift>Left
+  go_next = <Primary><Shift>Right
+  go_right = <Primary><Shift>Right
+  go_up = <Primary><Shift>Up
+  help = F12
+  hide_window = F1
+  next_tab = <Primary>Page_Down
+  prev_tab = <Primary>Page_Up
+  resize_down = <Primary><Shift>p
+  resize_left = <Primary><Shift>i
+  resize_right = <Primary><Shift>h
+  resize_up = <Primary><Shift>e
+  split_horiz = <Primary><Shift>d
+  split_vert = <Primary><Shift>j
+  zoom_in = <Primary>equal
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = True
+      last_active_term = e61998a6-d2a8-41fb-b224-b07c6c337023
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 3840, 2160
+      title = /bin/bash
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 1444
+      ratio = 0.376822916667
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 1663
+      ratio = 0.771296296296
+      type = VPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 977
+      ratio = 0.410041841004
+      type = HPaned
+    [[[child7]]]
+      order = 1
+      parent = child5
+      position = 1326
+      ratio = 0.615277777778
+      type = VPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = e61998a6-d2a8-41fb-b224-b07c6c337023
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = 5b84cc94-bd7d-47cf-b7ac-ac813898e89a
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = bad6e3e1-77d3-42f1-8d33-2ee7fe213750
+    [[[terminal8]]]
+      order = 0
+      parent = child7
+      profile = default
+      type = Terminal
+      uuid = 37c2dec1-3d20-49ac-afff-ebae491cd340
+    [[[terminal9]]]
+      order = 1
+      parent = child7
+      profile = default
+      type = Terminal
+      uuid = 53b173c7-bdad-4ca2-8dc8-30f8f73d1b2f
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.87
+    background_image = None
+    background_type = transparent
+    cursor_color = "#ff0000"
+    font = DejaVu Sans Mono Bold 11
+    foreground_color = "#dadada"
+    scroll_on_output = False
+    scrollback_lines = 4096
+    show_titlebar = False
+    use_system_font = False
