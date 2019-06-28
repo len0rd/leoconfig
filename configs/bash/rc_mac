@@ -1,0 +1,10 @@
+
+# these are bash_rc things specific to Mac
+
+# generally we wanna use gcc when type 'gcc', but mac thinks I want to use llvm/clang
+export CC='/usr/local/bin/gcc-8'
+export CXX='/usr/local/bin/g++-8'
+alias g++='g++-8'
+alias gcc='gcc-8'
+alias cc='gcc-8'
+alias c++='c++-8'

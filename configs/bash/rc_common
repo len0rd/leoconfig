@@ -1,0 +1,31 @@
+
+# these bash things are common to both Linux and Mac installs
+
+# QOL aliases
+RED='\033[0;31m'
+PURPLE='\033[0;35m'
+BLUE='\033[0;34m'
+LIGHT_BLUE='\033[1;34m'
+GREEN='\033[0;32m'
+YELLOW='\033[33;1m'
+NC='\033[0m' # No Color
+
+alias pssh='ps aux | grep ssh'
+alias py='python3'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gpush='git push'
+alias gpull='git pull'
+alias gcheck='git checkout'
+alias gremote='git config --get remote.origin.url'
+alias gsub='git submodule update --init --recursive'
+alias jj='java -jar'
+alias ls='ls -GFhl'
+alias clear='clear && delim'
+
+delim() {
+    printf "${PURPLE}%*s${NC}\n" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+    printf "${RED}%*s${NC}\n" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+    printf "${PURPLE}%*s${NC}\n" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+}

@@ -1,0 +1,30 @@
+
+Host leo
+User len0rd
+Hostname 159.65.70.80
+Port 22
+
+Host leonyc
+User len0rd
+Hostname 165.22.32.229
+Port 22
+
+Host byu
+Hostname ssh.et.byu.edu
+Port 22
+User tylerm15
+
+Host ysa
+Hostname ysa2.org
+Port 22
+User ysa
+
+Host ground
+Hostname 192.168.1.10
+Port 22
+User byu
+
+Host eowyn
+Hostname 192.168.1.8
+Port 22
+User odroid
