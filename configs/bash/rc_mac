@@ -19,3 +19,19 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 # quickly turn hidden files on/off
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Bash completion:
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    source $(brew --prefix)/etc/bash_completion
+fi
+
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+# brew installed openssl
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+source /usr/local/git/contrib/completion/git-completion.bash
+GIT_PS1_SHOWDIRTYSTATE=true
+PS1="${PURPLE_BOLD}\u${NC}:${LIGHT_BLUE}\w${NC} ${GREEN_BOLD}$(__git_ps1)${NC} \$ "

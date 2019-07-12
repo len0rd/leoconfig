@@ -26,7 +26,13 @@ $script_path/programs/install_other.sh "Mac"
 brew cleanup
 echo_green "Programs installed!"
 
+echo_blue "Setup Code"
+cp $script_path/configs/git/config ~/.gitconfig
+cp $script_path/configs/git/excludes ~/.gitexcludes
+git config --global user.name "len0rd"
+git config --global apply.whitespace nowarn
 $script_path/env/clone_code.sh
+echo_green "Code setup"
 
 echo_blue "Setup SSH config"
 if [ ! -d ~/.ssh ]; then
@@ -61,11 +67,12 @@ echo_green "Donzo"
 echo_yellow "Here's a list of programs you still need to install:"
 echo "  - Bear (appstore)"
 echo "  - Joystick Mapper"
-echo "  - Screen-scraper(?)"
+echo "  - Private-Internet-Access (installer at /usr/local/Caskroom)"
 
 echo ""
 echo_yellow "And stuff todo:"
 echo "  - configure alfred over spotlight"
 echo "  - enable paragon-ntfs kernel extension(?)"
-echo "  - import postico favorites as needed"
-echo "  - wrap anaconda bash_profile stuff in condainit" 
+echo "  - import postico license and favorites as needed"
+echo "  - wrap anaconda bash_profile stuff in condainit"
+echo "  - import paragon ntfs license"

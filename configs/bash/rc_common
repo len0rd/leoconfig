@@ -8,6 +8,9 @@ BLUE='\033[0;34m'
 LIGHT_BLUE='\033[1;34m'
 GREEN='\033[0;32m'
 YELLOW='\033[33;1m'
+PURPLE_BOLD='\033[1;35m'
+LIGHT_BLUE_BOLD='\033[1;34m'
+GREEN_BOLD='\033[1;32m'
 NC='\033[0m' # No Color
 
 alias pssh='ps aux | grep ssh'

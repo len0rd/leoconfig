@@ -13,6 +13,7 @@ if [ $1 = "Mac" ]; then
     brew install automake
     brew install autoconf
     brew install vim
+    brew install wget
     brew cask install transmission
     brew cask install alfred
     brew cask install postico
