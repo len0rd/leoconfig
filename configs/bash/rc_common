@@ -12,6 +12,10 @@ NC='\033[0m' # No Color
 
 alias pssh='ps aux | grep ssh'
 alias py='python3'
+alias jj='java -jar'
+alias ls='ls -GFhl'
+alias clear='clear && delim'
+# git aliases
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
@@ -20,12 +24,31 @@ alias gpull='git pull'
 alias gcheck='git checkout'
 alias gremote='git config --get remote.origin.url'
 alias gsub='git submodule update --init --recursive'
-alias jj='java -jar'
-alias ls='ls -GFhl'
-alias clear='clear && delim'
 
 delim() {
     printf "${PURPLE}%*s${NC}\n" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     printf "${RED}%*s${NC}\n" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     printf "${PURPLE}%*s${NC}\n" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+}
+
+noconda() {
+    # remove conda/anaconda from the path so you use actual python base install
+    export PATH=`echo ${PATH} | awk -v RS=: -v ORS=: '/anaconda3/ {next} {print}'`
+}
+
+rosat() {
+    # tell you whats up with the ros network
+    echo -e "${LIGHT_BLUE}ROS_MASTER_URI=" ${ROS_MASTER_URI}
+    echo -e "ROS_IP=" ${ROS_IP}
+    echo -e "ROS_HOSTNAME=" ${ROS_HOSTNAME} ${NC}
+}
+
+tunnel() {
+    # make ssh tunneling a little easier. Only allows one tunnel at a time - on port 8123
+    if [ $1 = "kill" ]; then
+        sudo kill $(ps aux | grep 'ssh -D 8123 -f -C' | awk 'NR==1{print $2}')
+    else
+        ssh -D 8123 -f -C -q -N $1
+        ps aux | grep ssh
+    fi
 }

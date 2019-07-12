@@ -8,3 +8,14 @@ alias g++='g++-8'
 alias gcc='gcc-8'
 alias cc='gcc-8'
 alias c++='c++-8'
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+# Tell ls to be colourful
+export CLICOLOR=1
+export LSCOLORS=Exfxcxdxbxegedabagacad
+
+# quickly turn hidden files on/off
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
