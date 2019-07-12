@@ -4,11 +4,8 @@ script_path=$(dirname "$0")
 
 echo "I'm ona Mac!!!"
 
-
-cd env/color_functions
-bash copy_color_functions
-cd ../..
-
+sudo cp -a $script_path/env/color_functions/. /usr/local/bin/
+echo_green "color functions installed"
 
 echo_blue "Install brew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
