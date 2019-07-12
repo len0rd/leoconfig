@@ -6,6 +6,7 @@ echo "Install other non-helpful crap"
 
 if [ $1 = "Mac" ]; then
     brew cask install minecraft # yep, thats right
-elif [ $1 = "Linux" ]; then
-    # TODO: idk what other stuff i want here
+    brew cask install vlc
+# elif [ $1 = "Linux" ]; then
+#     # TODO: idk what other stuff i want here
 fi

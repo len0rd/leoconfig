@@ -21,6 +21,6 @@ if [ $1 = "Mac" ]; then
     brew cask install paragon-ntfs
     brew cask install parallels
     brew cask install private-internet-access
-elif [ $1 = "Linux" ]; then
-    # TODO: idk what other utilities i want here
+# elif [ $1 = "Linux" ]; then
+#     # TODO: idk what other utilities i want here
 fi

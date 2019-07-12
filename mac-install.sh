@@ -55,6 +55,8 @@ cat $script_path/configs/bash/rc_mac >> ~/.bash_profile
 source ~/.bash_profile
 echo_green "bash_profile done!"
 
+delim
+
 echo_green "Donzo"
 echo_yellow "Here's a list of programs you still need to install:"
 echo "  - Bear (appstore)"
@@ -66,3 +68,4 @@ echo_yellow "And stuff todo:"
 echo "  - configure alfred over spotlight"
 echo "  - enable paragon-ntfs kernel extension(?)"
 echo "  - import postico favorites as needed"
+echo "  - wrap anaconda bash_profile stuff in condainit" 

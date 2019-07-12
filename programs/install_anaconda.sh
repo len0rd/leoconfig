@@ -8,6 +8,5 @@ echo "install conda/anaconda"
 if [ $1 = "Mac" ]; then
     wget -O conda-inst.sh.tmp https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh
     ${script_path}/conda-inst.sh.tmp # run it
-elif [ $1 = "Linux" ]; then
-
+# elif [ $1 = "Linux" ]; then
 fi
