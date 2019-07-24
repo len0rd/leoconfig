@@ -25,3 +25,4 @@ git clone https://github.com/rosflight/BreezySTM32.git breezy_rosflight
 git clone https://github.com/len0rd/YamaCrawler.git yama
 git clone https://github.com/len0rd/personal-website.git
 git clone https://github.com/len0rd/Repley.git repley
+git clone https://github.com/len0rd/leoconfig.git leoconfig

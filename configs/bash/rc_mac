@@ -32,6 +32,8 @@ export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-source /usr/local/git/contrib/completion/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
-PS1="${PURPLE_BOLD}\u${NC}:${LIGHT_BLUE}\w${NC} ${GREEN_BOLD}$(__git_ps1)${NC} \$ "
+# PS1="${PURPLE_BOLD}\u${NC}:${LIGHT_BLUE}\w${NC} ${GREEN_BOLD}$(__git_ps1 ' (%s)')${NC} \$ "
+# unfortunatly because the git_ps1, we cant use color aliases here :/ ^^ this is basically what's happening though
+PS1='\033[1;35m\u\033[0m:\033[1;34m\w\033[0m \033[1;32m$(__git_ps1 "(%s)")\033[0m 

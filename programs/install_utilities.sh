@@ -22,6 +22,9 @@ if [ $1 = "Mac" ]; then
     brew cask install paragon-ntfs
     brew cask install parallels
     brew cask install private-internet-access
+    # get the best font ever
+    brew tap homebrew/cask-fonts
+    brew cask install font-fira-code
 # elif [ $1 = "Linux" ]; then
 #     # TODO: idk what other utilities i want here
 fi
