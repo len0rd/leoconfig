@@ -55,3 +55,32 @@ tunnel() {
         ps aux | grep ssh
     fi
 }
+
+##########################
+#     "TERM METHODS"
+# helper terminal methods
+##########################
+
+function gconf() {
+    if [ "$1" == "github" ]; then
+        git config user.email "len0rd@users.noreply.github.com"
+        git config user.name  "len0rd"
+        echo_blue "Set git config to Github user"
+    fi
+}
+
+# completion for the gconf function
+__gconf() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    # add different arguments to this as a space-seperated list
+    opts="github"
+
+    if [[ ${cur} == * ]] ; then
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        return 0
+    fi
+}
+complete -F __gconf gconf

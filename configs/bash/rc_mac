@@ -35,15 +35,3 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 PS1='\[\033[1;35m\]\u\[\033[0m\]:\[\033[1;34m\]\w\[\033[0m\] \[\033[1;32m\]$(__git_ps1 "(%s)")\[\033[0m\] \$ '
-
-##########################
-#     "TERM METHODS"
-# helper terminal methods
-##########################
-
-#TODO: fill this out
-function gconf () {
-
-}
-
-
