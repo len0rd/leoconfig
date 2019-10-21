@@ -2,7 +2,7 @@
 
 script_path=$(dirname "$0")
 
-echo "install a bunch of crap"
+echo -n "Install a bunch of crap..."
 
 if [ $1 = "Mac" ]; then
     brew install git # if i somehow dont already have it (prolly do if im running this..)
@@ -22,9 +22,8 @@ if [ $1 = "Mac" ]; then
     brew cask install paragon-ntfs
     brew cask install parallels
     brew cask install private-internet-access
-    # get the best font ever
-    brew tap homebrew/cask-fonts
-    brew cask install font-fira-code
 # elif [ $1 = "Linux" ]; then
 #     # TODO: idk what other utilities i want here
 fi
+
+echo_cyan "[DONE]"
