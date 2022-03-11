@@ -9,3 +9,7 @@ Just run:
 ```bash
 ./install.sh
 ```
+
+## Linux Notes
+
+- Gnome Theme: Nordic Darker

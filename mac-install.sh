@@ -3,8 +3,6 @@
 script_path=$(dirname "$0")
 machine = "Mac"
 
-echo "I'm ona Mac!!!"
-
 echo_blue "Install brew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -20,13 +18,11 @@ if [ ! -d ~/.ssh ]; then
     mkdir ~/.ssh
 fi
 
-sshConfig=$(cat ${script_path}/configs/ssh/config)
-
 printf "# General Settings
 Host *
   UseKeyChain yes
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/id_rsa\n${sshConfig}" > ssh_config.tmp
+  IdentityFile ~/.ssh/id_rsa\n" > ssh_config.tmp
 
 cp ssh_config.tmp ~/.ssh/config
 # setup keys

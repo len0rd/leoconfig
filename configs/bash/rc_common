@@ -13,10 +13,11 @@ LIGHT_BLUE_BOLD='\033[1;34m'
 GREEN_BOLD='\033[1;32m'
 NC='\033[0m' # No Color
 
-alias pssh='ps aux | grep ssh'
-alias py='python3'
-alias jj='java -jar'
 alias ls='ls -GFhl'
+alias la='ls -A'
+alias l='ls -CF'
+alias pssh='ps aux | grep ssh'
+alias jj='java -jar'
 alias clear='clear && delim'
 # git aliases
 alias gs='git status'
@@ -27,6 +28,11 @@ alias gpull='git pull'
 alias gcheck='git checkout'
 alias gremote='git config --get remote.origin.url'
 alias gsub='git submodule update --init --recursive'
+# prune away local copies of branches that have been merged on remote
+alias gprune='git fetch -p && git branch --merged | grep -i -v -E "master|develop|main|dev" | xargs git branch -d'
+alias gdiff='git diff'
+# git log with one line per commit
+alias glog="git log --oneline"
 
 delim() {
     printf "${PURPLE}%*s${NC}\n" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
@@ -87,3 +93,14 @@ __gconf() {
     fi
 }
 complete -F __gconf gconf
+
+# max out all cpu cores with arbitrary task. Good for tests that need to be performed under heavy load 
+function burncpu() {
+    numProc="$(getconf _NPROCESSORS_ONLN)"
+    openssl speed -multi ${numProc}
+}
+
+# run whatevers passed in until it returns a non-zero exit code
+untilfail() {
+    while "$@"; do :; done
+}

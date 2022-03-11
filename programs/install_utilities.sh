@@ -14,11 +14,10 @@ if [ $1 = "Mac" ]; then
     brew install autoconf
     brew install vim
     brew install wget
+    brew cask install vlc
     brew cask install transmission
-    brew cask install alfred
     brew cask install postico
     brew cask install postman
-    brew cask install itsycal
     brew cask install paragon-ntfs
     brew cask install parallels
     brew cask install private-internet-access
