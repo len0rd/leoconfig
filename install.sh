@@ -35,10 +35,18 @@ $script_path/programs/install_utilities.sh ${machine}
 $script_path/programs/install_anaconda.sh ${machine}
 $script_path/programs/install_terminal.sh ${machine}
 $script_path/programs/install_vscode.sh ${machine}
-$script_path/programs/install_messengers.sh ${machine}
 $script_path/programs/install_firefox.sh ${machine}
-$script_path/programs/install_other.sh ${machine}
+$script_path/programs/install_launcher.sh ${machine}
 echo_green "Programs installed!"
+
+echo_red "Work machine? [Y/n]"
+read WORK_M
+
+# install stuff for a non-work machine (fun stuff)
+if [ "$WORK_M" == 'n' ]; then
+    $script_path/programs/install_messengers.sh ${machine}
+    $script_path/programs/install_other.sh ${machine}
+fi
 
 echo_blue "Setup Code"
 cp $script_path/configs/git/config ~/.gitconfig

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "install discord and slack"
+echo "install browser"
 
 if [ $1 = "Mac" ]; then
     brew cask install firefox
