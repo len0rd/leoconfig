@@ -6,6 +6,7 @@ alias l='ls -CF'
 alias pssh='ps aux | grep ssh'
 alias jj='java -jar'
 alias clear='clear && delim'
+
 # git aliases
 alias gs='git status'
 alias ga='git add'

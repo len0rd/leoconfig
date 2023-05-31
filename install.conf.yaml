@@ -1,10 +1,24 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: ['~']
 
 - create:
   - ~/.config/bashrc/
 
 - link:
-  - ~/.config/bashrc/aliases.sh: config/bashrc/aliases.sh
-  - ~/.config/bashrc/helpers.sh: config/bashrc/helpers.sh
-  - ~/.config/bashrc/prompt.sh: config/bashrc/prompt.sh
-  - ~/.bashrc: .bashrc
+  ~/.config/bashrc/aliases.sh: config/bashrc/aliases.sh
+  ~/.config/bashrc/helpers.sh: config/bashrc/helpers.sh
+  ~/.config/bashrc/prompt.sh: config/bashrc/prompt.sh
+  ~/.bashrc: .bashrc
+  ~/.gitconfig: config/git/config
+  ~/.gitignore_global: config/git/ignore_global
+  ~/.config/terminator:
+      create: true
+      path: config/terminator
+
+# platform-dependent installation commands
+# see: https://github.com/anishathalye/dotbot/wiki/Plugins
+# - omnipkg
+#   - [fira-code-fonts fonts-firacode]

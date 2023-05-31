@@ -116,7 +116,7 @@ function burncpu() {
     openssl speed -multi ${numProc}
 }
 
-# run whatevers passed in until it returns a non-zero exit code
+# run whatever is passed in until it returns a non-zero exit code
 function untilfail() {
     while "$@"; do :; done
 }
