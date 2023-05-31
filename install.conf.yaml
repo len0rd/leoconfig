@@ -1,0 +1,10 @@
+- clean: ['~']
+
+- create:
+  - ~/.config/bashrc/
+
+- link:
+  - ~/.config/bashrc/aliases.sh: config/bashrc/aliases.sh
+  - ~/.config/bashrc/helpers.sh: config/bashrc/helpers.sh
+  - ~/.config/bashrc/prompt.sh: config/bashrc/prompt.sh
+  - ~/.bashrc: .bashrc

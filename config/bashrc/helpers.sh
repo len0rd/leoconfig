@@ -1,40 +1,38 @@
-
-# these bash things are common to both Linux and Mac installs
+# Helper functions
 
 # QOL aliases
 RED='\033[0;31m'
-PURPLE='\033[0;35m'
-BLUE='\033[0;34m'
-LIGHT_BLUE='\033[1;34m'
-GREEN='\033[0;32m'
 YELLOW='\033[33;1m'
-PURPLE_BOLD='\033[1;35m'
-LIGHT_BLUE_BOLD='\033[1;34m'
+GREEN='\033[0;32m'
+LIGHT_BLUE='\033[1;34m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+
 GREEN_BOLD='\033[1;32m'
+LIGHT_BLUE_BOLD='\033[1;34m'
+PURPLE_BOLD='\033[1;35m'
 NC='\033[0m' # No Color
 
-alias ls='ls -GFhl'
-alias la='ls -A'
-alias l='ls -CF'
-alias pssh='ps aux | grep ssh'
-alias jj='java -jar'
-alias clear='clear && delim'
-# git aliases
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gpush='git push'
-alias gpull='git pull'
-alias gcheck='git checkout'
-alias gremote='git config --get remote.origin.url'
-alias gsub='git submodule update --init --recursive'
-# prune away local copies of branches that have been merged on remote
-alias gprune='git fetch -p && git branch --merged | grep -i -v -E "master|develop|main|dev" | xargs git branch -d'
-alias gdiff='git diff'
-# git log with one line per commit and a cute graph
-alias glog="git log --oneline --decorate --graph"
+function echo_red() { 
+    echo -e ${RED}$@ ${NC}
+}
+function echo_yellow() { 
+    echo -e ${YELLOW}$@ ${NC}
+}
+function echo_green() { 
+    echo -e ${GREEN}$@ ${NC}
+}
+function echo_lblue() { 
+    echo -e ${LIGHT_BLUE}$@ ${NC}
+}
+function echo_blue() { 
+    echo -e ${BLUE}$@ ${NC}
+}
+function echo_purple() { 
+    echo -e ${PURPLE}$@ ${NC}
+}
 
-delim() {
+function delim() {
     printf "${PURPLE}%*s${NC}\n" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     printf "${RED}%*s${NC}\n" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     printf "${PURPLE}%*s${NC}\n" "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
@@ -47,6 +45,7 @@ noconda() {
 
 rosat() {
     # tell you whats up with the ros network
+    
     echo -e "${LIGHT_BLUE}ROS_MASTER_URI=" ${ROS_MASTER_URI}
     echo -e "ROS_IP=" ${ROS_IP}
     echo -e "ROS_HOSTNAME=" ${ROS_HOSTNAME} ${NC}
@@ -61,14 +60,6 @@ tunnel() {
         ps aux | grep ssh
     fi
 }
-
-# configure bash PS1 to show git branch when in a repo folder
-export PS1='\[\e[1;37m\]\[\e[1;32m\]\u\[\e[0;39m\]@\[\e[1;36m\]\h\[\e[0;39m\]:\[\e[1;33m\]\w\[\e[0;39m\]\[\e[1;35m\]$(__git_ps1 " (%s)")\[\e[0;39m\] \[\e[1;37m\]\[\e[0;39m\]$ '
-
-##########################
-#     "TERM METHODS"
-# helper terminal methods
-##########################
 
 function gconf() {
     if [ "$1" == "github" ]; then
@@ -94,6 +85,31 @@ __gconf() {
 }
 complete -F __gconf gconf
 
+function gitdebug() {
+    echo_blue "Activate super git debug"
+    export GIT_TRACE_PACKET=1
+    export GIT_TRACE=1
+    export GIT_CURL_VERBOSE=1
+}
+
+function nogitdebug() {
+    echo_blue "Deactivate super git debug"
+    unset GIT_TRACE_PACKET
+    unset GIT_TRACE
+    unset GIT_CURL_VERBOSE
+}
+
+# Search for a given symbol in all static libraries (".a") located in the provided path
+# arg1: path
+# arg2: symbol
+function syminlibs() {
+    if [[ $# -ne 2 ]]; then
+        echo "Invalid arg count. Usage: syminlibs path/of/libs/to/check symbolLookup" >&2
+        return 2
+    fi
+    find $1 -name \*.elf -exec bash -c "nm --defined-only {} 2>/dev/null | grep $2 && echo {}" \;
+}
+
 # max out all cpu cores with arbitrary task. Good for tests that need to be performed under heavy load 
 function burncpu() {
     numProc="$(getconf _NPROCESSORS_ONLN)"
@@ -101,6 +117,6 @@ function burncpu() {
 }
 
 # run whatevers passed in until it returns a non-zero exit code
-untilfail() {
+function untilfail() {
     while "$@"; do :; done
 }

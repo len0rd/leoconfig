@@ -1,15 +1,7 @@
 # Leoconfig
 
-Configuration scripts for setting up a fresh install of len0rd's machine - either Mac or Linux. Cause I'm lazy.
+Configuration scripts for setting up a fresh install of len0rd's machine.
 
-Tested with macOS Mojave and Ubuntu 18.04
+Uses dotbot.
 
-Just run:
-
-```bash
-./install.sh
-```
-
-## Linux Notes
-
-- Gnome Theme: Nordic Darker
+Run: `./install`
