@@ -14,9 +14,18 @@
   ~/.bashrc: .bashrc
   ~/.gitconfig: config/git/config
   ~/.gitignore_global: config/git/ignore_global
-  ~/.config/terminator:
+  ~/.config/terminator/config:
       create: true
-      path: config/terminator
+      path: config/terminator/config
+
+- shell:
+  # install rust
+  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  # install starship
+  - curl -sS https://starship.rs/install.sh | sh
+
+- shell:
+  - starship preset pastel-powerline -o ~/.config/starship.toml
 
 # platform-dependent installation commands
 # see: https://github.com/anishathalye/dotbot/wiki/Plugins
