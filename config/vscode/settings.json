@@ -11,4 +11,8 @@
     "workbench.colorTheme": "Night Owl",
     "workbench.activityBar.visible": false,
     "files.insertFinalNewline": true,
+    "editor.indentSize": "tabSize",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "files.trimTrailingWhitespace": true,
 }

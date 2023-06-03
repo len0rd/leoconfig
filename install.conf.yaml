@@ -1,31 +1,31 @@
 - defaults:
     link:
-      relink: true
+        create: true
+        relink: true
 
 - clean: ['~']
 
 - create:
-  - ~/.config/bashrc/
+    - ~/.config/bashrc/
 
 - link:
-  ~/.config/bashrc/aliases.sh: config/bashrc/aliases.sh
-  ~/.config/bashrc/helpers.sh: config/bashrc/helpers.sh
-  ~/.config/bashrc/prompt.sh: config/bashrc/prompt.sh
-  ~/.bashrc: .bashrc
-  ~/.gitconfig: config/git/config
-  ~/.gitignore_global: config/git/ignore_global
-  ~/.config/terminator/config:
-      create: true
-      path: config/terminator/config
+    ~/.config/bashrc/aliases.sh: config/bashrc/aliases.sh
+    ~/.config/bashrc/helpers.sh: config/bashrc/helpers.sh
+    ~/.bashrc:
+        force: true
+        path: bashrc
+    ~/.gitconfig: config/git/config
+    ~/.gitignore_global: config/git/ignore_global
+    ~/.config/terminator/config:
+        create: true
+        path: config/terminator/config
+    ~/.config/starship.toml: config/starship.toml
 
-- shell:
-  # install rust
-  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  # install starship
-  - curl -sS https://starship.rs/install.sh | sh
-
-- shell:
-  - starship preset pastel-powerline -o ~/.config/starship.toml
+# - shell:
+#     # install rust
+#     - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#     # install starship
+#     - curl -sS https://starship.rs/install.sh | sh
 
 # platform-dependent installation commands
 # see: https://github.com/anishathalye/dotbot/wiki/Plugins

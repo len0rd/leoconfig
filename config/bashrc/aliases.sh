@@ -1,6 +1,6 @@
 # Aliases I like to use
 
-alias ls='ls -GFhl'
+alias ls='ls -GFhl --color=auto'
 alias la='ls -A'
 alias l='ls -CF'
 alias pssh='ps aux | grep ssh'
