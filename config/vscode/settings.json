@@ -1,6 +1,6 @@
 {
     "files.eol": "\n",
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "FiraMono Nerd Font, Regular",
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     "editor.minimap.enabled": false,

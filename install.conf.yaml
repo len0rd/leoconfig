@@ -20,6 +20,14 @@
         create: true
         path: config/terminator/config
     ~/.config/starship.toml: config/starship.toml
+    ~/.config/Code/User/settings.json:
+        create: true
+        force: true
+        path: config/vscode/settings.json
+    ~/.config/Code/User/keybindings.json:
+        create: true
+        force: true
+        path: config/vscode/keybindings.json
 
 # - shell:
 #     # install rust

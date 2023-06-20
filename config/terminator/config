@@ -5,108 +5,97 @@
   always_on_top = True
   hide_on_lose_focus = True
   sticky = True
-  always_split_with_profile = True
   title_hide_sizetext = True
-  title_receive_fg_color = "#e1e1e1"
   title_transmit_fg_color = "#d6d6d6"
+  title_receive_fg_color = "#e1e1e1"
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  always_split_with_profile = True
   title_use_system_font = False
 [keybindings]
-  close_term = <Primary>d
+  zoom_in = <Primary>equal
   cycle_next = <Shift>Page_Down
   cycle_prev = <Primary><Shift>Page_Up
+  go_next = <Primary><Shift>Right
+  go_up = <Primary><Shift>Up
   go_down = <Primary><Shift>Down
   go_left = <Primary><Shift>Left
-  go_next = <Primary><Shift>Right
   go_right = <Primary><Shift>Right
-  go_up = <Primary><Shift>Up
-  help = F12
-  hide_window = F1
-  next_tab = <Primary>Page_Down
-  prev_tab = <Primary>Page_Up
+  split_horiz = <Primary><Shift>d
+  split_vert = <Primary><Shift>j
+  close_term = <Primary>d
+  resize_up = <Primary><Shift>e
   resize_down = <Primary><Shift>p
   resize_left = <Primary><Shift>i
   resize_right = <Primary><Shift>h
-  resize_up = <Primary><Shift>e
-  split_horiz = <Primary><Shift>d
-  split_vert = <Primary><Shift>j
-  zoom_in = <Primary>equal
-[layouts]
-  [[default]]
-    [[[child0]]]
-      fullscreen = True
-      last_active_term = e61998a6-d2a8-41fb-b224-b07c6c337023
-      last_active_window = True
-      maximised = False
-      order = 0
-      parent = ""
-      position = 0:0
-      size = 3840, 2160
-      title = /bin/bash
-      type = Window
-    [[[child1]]]
-      order = 0
-      parent = child0
-      position = 1444
-      ratio = 0.376822916667
-      type = HPaned
-    [[[child2]]]
-      order = 0
-      parent = child1
-      position = 1663
-      ratio = 0.771296296296
-      type = VPaned
-    [[[child5]]]
-      order = 1
-      parent = child1
-      position = 977
-      ratio = 0.410041841004
-      type = HPaned
-    [[[child7]]]
-      order = 1
-      parent = child5
-      position = 1326
-      ratio = 0.615277777778
-      type = VPaned
-    [[[terminal3]]]
-      order = 0
-      parent = child2
-      profile = default
-      type = Terminal
-      uuid = e61998a6-d2a8-41fb-b224-b07c6c337023
-    [[[terminal4]]]
-      order = 1
-      parent = child2
-      profile = default
-      type = Terminal
-      uuid = 5b84cc94-bd7d-47cf-b7ac-ac813898e89a
-    [[[terminal6]]]
-      order = 0
-      parent = child5
-      profile = default
-      type = Terminal
-      uuid = bad6e3e1-77d3-42f1-8d33-2ee7fe213750
-    [[[terminal8]]]
-      order = 0
-      parent = child7
-      profile = default
-      type = Terminal
-      uuid = 37c2dec1-3d20-49ac-afff-ebae491cd340
-    [[[terminal9]]]
-      order = 1
-      parent = child7
-      profile = default
-      type = Terminal
-      uuid = 53b173c7-bdad-4ca2-8dc8-30f8f73d1b2f
-[plugins]
+  next_tab = <Primary>Page_Down
+  prev_tab = <Primary>Page_Up
+  hide_window = F1
+  help = F12
 [profiles]
   [[default]]
     background_darkness = 0.87
-    background_image = None
     background_type = transparent
     cursor_color = "#ff0000"
     font = DejaVu Sans Mono Bold 11
     foreground_color = "#dadada"
-    scroll_on_output = False
-    scrollback_lines = 4096
     show_titlebar = False
+    scrollback_lines = 4096
     use_system_font = False
+    background_image = None
+  [[Night Owl]]
+    background_color = "#011627"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#80a4c2"
+    cursor_color_fg = False
+    font = FiraMono Nerd Font Propo 11
+    foreground_color = "#d6deeb"
+    show_titlebar = False
+    scrollback_lines = 4096
+    palette = "#2e3436:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#d3d7cf:#555753:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#eeeeec"
+    use_system_font = False
+    background_image = None
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = False
+      fullscreen = False
+      size = 1920, 1080
+      title = /bin/bash
+      last_active_term = 53b173c7-bdad-4ca2-8dc8-30f8f73d1b2f
+      last_active_window = True
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 1151
+      ratio = 0.6010443864229765
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = Night Owl
+      uuid = bad6e3e1-77d3-42f1-8d33-2ee7fe213750
+    [[[child3]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 661
+      ratio = 0.6148837209302326
+    [[[terminal4]]]
+      type = Terminal
+      parent = child3
+      order = 0
+      profile = Night Owl
+      uuid = 37c2dec1-3d20-49ac-afff-ebae491cd340
+    [[[terminal5]]]
+      type = Terminal
+      parent = child3
+      order = 1
+      profile = Night Owl
+      uuid = 53b173c7-bdad-4ca2-8dc8-30f8f73d1b2f
+[plugins]
