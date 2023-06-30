@@ -13,22 +13,22 @@ LIGHT_BLUE_BOLD='\033[1;34m'
 PURPLE_BOLD='\033[1;35m'
 NC='\033[0m' # No Color
 
-function echo_red() { 
+function echo_red() {
     echo -e ${RED}$@ ${NC}
 }
-function echo_yellow() { 
+function echo_yellow() {
     echo -e ${YELLOW}$@ ${NC}
 }
-function echo_green() { 
+function echo_green() {
     echo -e ${GREEN}$@ ${NC}
 }
-function echo_lblue() { 
+function echo_lblue() {
     echo -e ${LIGHT_BLUE}$@ ${NC}
 }
-function echo_blue() { 
+function echo_blue() {
     echo -e ${BLUE}$@ ${NC}
 }
-function echo_purple() { 
+function echo_purple() {
     echo -e ${PURPLE}$@ ${NC}
 }
 
@@ -45,7 +45,7 @@ noconda() {
 
 rosat() {
     # tell you whats up with the ros network
-    
+
     echo -e "${LIGHT_BLUE}ROS_MASTER_URI=" ${ROS_MASTER_URI}
     echo -e "ROS_IP=" ${ROS_IP}
     echo -e "ROS_HOSTNAME=" ${ROS_HOSTNAME} ${NC}
@@ -66,6 +66,10 @@ function gconf() {
         git config user.email "len0rd@users.noreply.github.com"
         git config user.name  "len0rd"
         echo_blue "Set git config to Github user"
+    elif [ "$1" == "ara" ]; then
+        git config user.email "tmiller@ara-inc.com"
+        git config user.name  "tyler miller"
+        echo_blue "Set git config to ARA BitBucket user"
     fi
 }
 
@@ -76,7 +80,7 @@ __gconf() {
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
     # add different arguments to this as a space-seperated list
-    opts="github"
+    opts="github ara"
 
     if [[ ${cur} == * ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -110,7 +114,7 @@ function syminlibs() {
     find $1 -name \*.elf -exec bash -c "nm --defined-only {} 2>/dev/null | grep $2 && echo {}" \;
 }
 
-# max out all cpu cores with arbitrary task. Good for tests that need to be performed under heavy load 
+# max out all cpu cores with arbitrary task. Good for tests that need to be performed under heavy load
 function burncpu() {
     numProc="$(getconf _NPROCESSORS_ONLN)"
     openssl speed -multi ${numProc}
