@@ -39,8 +39,9 @@ function delim() {
 }
 
 noconda() {
-    # remove conda/anaconda from the path so you use actual python base install
-    export PATH=`echo ${PATH} | awk -v RS=: -v ORS=: '/anaconda3/ {next} {print}'`
+    # remove conda/miniconda from the path so you use actual python base install
+    export PATH=`echo ${PATH} | awk -v RS=: -v ORS=: '/miniconda/ {next} {print}'`
+    unset -v CONDA_DEFAULT_ENV
 }
 
 rosat() {
@@ -123,4 +124,9 @@ function burncpu() {
 # run whatever is passed in until it returns a non-zero exit code
 function untilfail() {
     while "$@"; do :; done
+}
+
+# quiet Find. find but it shuts up about all the "Permission denied" errors
+function qfind() {
+    find $@ 2>&1 | grep -v "Permission denied"
 }

@@ -1,5 +1,5 @@
 [global_config]
-  window_state = maximise
+  window_state = fullscreen
   borderless = True
   hide_from_taskbar = True
   always_on_top = True
@@ -55,6 +55,19 @@
     palette = "#2e3436:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#d3d7cf:#555753:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#eeeeec"
     use_system_font = False
     background_image = None
+  [[deep]]
+    background_color = "#090909"
+    background_darkness = 0.87
+    background_type = transparent
+    cursor_color = "#d0d0d0"
+    cursor_color_fg = False
+    font = FiraCode Nerd Font weight=453 11
+    foreground_color = "#cdcdcd"
+    show_titlebar = False
+    scrollback_lines = 4096
+    palette = "#000000:#d70005:#1cd915:#d9bd26:#5665ff:#b052da:#50d2da:#e0e0e0:#535353:#fb0007:#22ff18:#fedc2b:#9fa9ff:#e09aff:#8df9ff:#ffffff"
+    use_system_font = False
+    background_image = None
 [layouts]
   [[default]]
     [[[child0]]]
@@ -78,7 +91,7 @@
       type = Terminal
       parent = child1
       order = 0
-      profile = Night Owl
+      profile = deep
       uuid = bad6e3e1-77d3-42f1-8d33-2ee7fe213750
     [[[child3]]]
       type = VPaned
@@ -90,12 +103,12 @@
       type = Terminal
       parent = child3
       order = 0
-      profile = Night Owl
+      profile = deep
       uuid = 37c2dec1-3d20-49ac-afff-ebae491cd340
     [[[terminal5]]]
       type = Terminal
       parent = child3
       order = 1
-      profile = Night Owl
+      profile = deep
       uuid = 53b173c7-bdad-4ca2-8dc8-30f8f73d1b2f
 [plugins]

@@ -20,6 +20,7 @@ $nodejs\
 $nim\
 $rust\
 $scala\
+$conda\
 [](fg:#86BBD8) \
 """
 
@@ -57,7 +58,7 @@ truncation_symbol = "…/"
 "Music" = " "
 "Pictures" = " "
 "pictures" = " "
-"code" = ""
+"code" = " "
 # Keep in mind that the order matters. For example:
 # "Important Documents" = "  "
 # will not be replaced, because "Documents" was already substituted before.
@@ -136,6 +137,11 @@ format = '[ $symbol ($version) ]($style)'
 symbol = " "
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
+
+[conda]
+ignore_base = false
+style = "bg:#86BBD8 fg:#000000"
+format = '[$symbol($environment)]($style)'
 
 [time]
 disabled = true
