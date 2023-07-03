@@ -6,6 +6,7 @@ $username\
 $directory\
 [](fg:#DA627D bg:#ADDB67)\
 $git_branch\
+$git_commit\
 $git_status\
 [](fg:#ADDB67 bg:#86BBD8)\
 $c\
@@ -89,6 +90,13 @@ format = '[ $symbol ($version) ]($style)'
 symbol = ""
 style = "bg:#ADDB67 fg:#000000"
 format = '[ $symbol $branch ]($style)'
+
+[git_commit]
+commit_hash_length = 8
+style = "bg:#ADDB67 fg:#000000"
+only_detached = true
+tag_disabled = true
+format = "[ 󰜘$hash ]($style)"
 
 [git_status]
 style = "bg:#ADDB67 fg:#000000"
