@@ -28,6 +28,13 @@
         create: true
         force: true
         path: config/vscode/keybindings.json
+    ~/.config/alacritty/alacritty.yml:
+        create: true
+        path: config/alacritty.yml
+    ~/.config/tmux/tmux.conf:
+        create: true
+        force: true
+        path: config/tmux.conf
 
 # - shell:
 #     # install rust
@@ -39,3 +46,14 @@
 # see: https://github.com/anishathalye/dotbot/wiki/Plugins
 # - omnipkg
 #   - [fira-code-fonts fonts-firacode]
+
+# - shell:
+#     # install neovim
+#     - sudo snap install neovim --classic
+#     # install nvchad
+#     - git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+
+# - shell:
+#     # install alacritty
+#     - apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+#     - cargo install alacritty

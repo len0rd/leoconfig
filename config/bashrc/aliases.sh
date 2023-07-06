@@ -21,3 +21,6 @@ alias gprune='git fetch -p && git branch --merged | grep -i -v -E "master|develo
 alias gdiff='git diff'
 # git log with one line per commit and a cute graph
 alias glog="git log --oneline --decorate --graph"
+
+# use neovim
+alias vim=nvim
