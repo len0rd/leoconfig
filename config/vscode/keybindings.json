@@ -19,14 +19,13 @@
         "command": "workbench.action.previousEditor"
     },
     {
-        "key": "shift+alt+right",
+        "key": "alt+right",
         "command": "workbench.action.focusRightGroup"
     },
     {
-        "key": "shift+alt+left",
+        "key": "alt+left",
         "command": "workbench.action.focusLeftGroup"
     },
-
     // disables
     {
         "key": "ctrl+shift+e",
@@ -79,6 +78,5 @@
         "key": "shift+alt+left",
         "command": "-editor.action.smartSelect.shrink",
         "when": "editorTextFocus"
-    },
-    // newly added
+    }
 ]
