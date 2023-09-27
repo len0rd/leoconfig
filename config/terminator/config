@@ -50,6 +50,7 @@
     font = FiraMono Nerd Font Propo 11
     foreground_color = "#d6deeb"
     show_titlebar = False
+    scrollbar_position = hidden
     scrollback_lines = 4096
     palette = "#2e3436:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#d3d7cf:#555753:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#eeeeec"
     use_custom_command = True
