@@ -20,7 +20,7 @@ alias gsub='git submodule update --init --recursive'
 alias gprune='git fetch -p && git branch --merged | grep -i -v -E "master|develop|main|dev" | xargs git branch -d'
 alias gdiff='git diff'
 # git log with one line per commit and a cute graph
-alias glog="git log --oneline --decorate --graph"
+alias glog="git log --branches --remotes --tags --oneline --decorate --graph"
 
 # use neovim
 alias vim=nvim

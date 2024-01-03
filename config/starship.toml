@@ -147,9 +147,10 @@ style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [conda]
+symbol = " "
 ignore_base = false
 style = "bg:#86BBD8 fg:#000000"
-format = '[$symbol($environment)]($style)'
+format = '[ $symbol($environment)]($style)'
 
 [time]
 disabled = true
