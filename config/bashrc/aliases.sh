@@ -24,3 +24,7 @@ alias glog="git log --branches --remotes --tags --oneline --decorate --graph"
 
 # use neovim
 alias vim=nvim
+
+# ssh convenience
+# get a list of the host names configured in your ssh for when you forget
+alias sshhosts="grep '^Host' ~/.ssh/config"

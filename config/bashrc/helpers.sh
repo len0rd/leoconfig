@@ -74,7 +74,18 @@ function gconf() {
     fi
 }
 
-# completion for the gconf function
+# amend the latest commit to and change the author
+function amend_auth() {
+    if [ "$1" == "github" ]; then
+        git commit --amend --author "len0rd <len0rd@users.noreply.github.com>" --no-edit
+        echo_blue "Amend commit author to Github user"
+    elif [ "$1" == "ara" ]; then
+        git commit --amend --author "tyler miller <tmiller@ara-inc.com>" --no-edit
+        echo_blue "Amend commit author to ARA BitBucket user"
+    fi
+}
+
+# completion for the gconf and amend_auth functions
 __gconf() {
     local cur prev opts
     COMPREPLY=()
@@ -89,6 +100,7 @@ __gconf() {
     fi
 }
 complete -F __gconf gconf
+complete -F __gconf amend_auth
 
 function gitdebug() {
     echo_blue "Activate super git debug"
