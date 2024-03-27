@@ -35,6 +35,9 @@
         create: true
         force: true
         path: config/tmux.conf
+    # convenience links
+    ~/documents: ~/Documents
+    ~/downloads: ~/Downloads
 
 # - shell:
 #     # install rust
