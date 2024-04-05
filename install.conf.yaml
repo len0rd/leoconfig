@@ -28,9 +28,9 @@
         create: true
         force: true
         path: config/vscode/keybindings.json
-    ~/.config/alacritty/alacritty.yml:
+    ~/.config/alacritty/alacritty.toml:
         create: true
-        path: config/alacritty.yml
+        path: config/alacritty.toml
     ~/.config/tmux/tmux.conf:
         create: true
         force: true
