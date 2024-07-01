@@ -28,3 +28,7 @@ alias vim=nvim
 # ssh convenience
 # get a list of the host names configured in your ssh for when you forget
 alias sshhosts="grep '^Host' ~/.ssh/config"
+
+
+# fuzzy open/search convenience
+alias op="fd --type f --hidden --exclude .git | fzf-tmux -p | xargs code"

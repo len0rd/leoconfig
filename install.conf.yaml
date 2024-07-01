@@ -44,16 +44,37 @@
 
 # platform-dependent installation commands
 # see: https://github.com/anishathalye/dotbot/wiki/Plugins
-# - omnipkg
-#   - [fira-code-fonts fonts-firacode]
+# fonts
+# - omnipkg:
+#     - update
+#     - install: [
+#         [fira-code-fonts, fonts-firacode]
+#     ]
 
-# - shell:
-#     # install neovim
-#     - sudo snap install neovim --classic
-#     # install nvchad
-#     - git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+# install alacritty
+
+# - omnipkg:
+#     - update
+#     - install: [
+#         cmake,
+#         pkg-config,
+#         libfreetype6-dev,
+#         libfontconfig1-dev,
+#         libxcb-xfixes0-dev,
+#         libxkbcommon-dev,
+#         python3
+#     ]
 
 # - shell:
 #     # install alacritty
-#     - apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 #     - cargo install alacritty
+
+# find (fd) and fuzzy search (fzf)
+# - shell:
+#       - apt install fd-find fzf
+#       # installed as fdfind since there's another fd package out there. remap
+#       - ln -s $(which fdfind) ~/.local/bin/fd
+
+# reverse search
+# - shell:
+#     - curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
