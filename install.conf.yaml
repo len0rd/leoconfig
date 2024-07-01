@@ -16,9 +16,6 @@
         path: bashrc
     ~/.gitconfig: config/git/config
     ~/.gitignore_global: config/git/ignore_global
-    ~/.config/terminator/config:
-        create: true
-        path: config/terminator/config
     ~/.config/starship.toml: config/starship.toml
     ~/.config/Code/User/settings.json:
         create: true
