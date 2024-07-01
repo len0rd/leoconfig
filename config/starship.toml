@@ -1,5 +1,6 @@
 format = """
 [](#9A348E)\
+$status\
 $os\
 $username\
 [](bg:#DA627D fg:#9A348E)\
@@ -42,6 +43,15 @@ disabled = false
 [os]
 style = "bg:#9A348E"
 disabled = true # Disabled by default
+
+# status of last run command
+[status]
+symbol = '🔴'
+success_symbol = '🟢'
+style = "bg:#9A348E"
+format = '[$symbol ]($style)'
+map_symbol = true
+disabled = false
 
 [directory]
 style = "bg:#DA627D fg:#000000"
