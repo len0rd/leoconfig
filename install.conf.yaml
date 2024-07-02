@@ -35,6 +35,10 @@
     # convenience links
     ~/documents: ~/Documents
     ~/downloads: ~/Downloads
+    ~/.config/atuin/config.toml:
+        create: true
+        force: true
+        path: config/atuin/config.toml
 
 # - shell:
 #     # install rust
