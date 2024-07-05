@@ -32,3 +32,6 @@ alias sshhosts="grep '^Host' ~/.ssh/config"
 
 # fuzzy open/search convenience
 alias op="fd --type f --hidden --exclude .git | fzf-tmux -p | xargs code"
+
+# when in a tmux session, apply my default starting layout to the current window
+alias deflayout="tmux split-window -h && tmux split-window -v"
