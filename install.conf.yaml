@@ -9,36 +9,19 @@
     - ~/.config/bashrc/
 
 - link:
-    ~/.config/bashrc/aliases.sh: config/bashrc/aliases.sh
-    ~/.config/bashrc/helpers.sh: config/bashrc/helpers.sh
     ~/.bashrc:
         force: true
         path: bashrc
     ~/.gitconfig: config/git/config
     ~/.gitignore_global: config/git/ignore_global
-    ~/.config/starship.toml: config/starship.toml
-    ~/.config/Code/User/settings.json:
+    # install all .config files with same dir structure
+    ~/.config/:
+        glob: true
         create: true
-        force: true
-        path: config/vscode/settings.json
-    ~/.config/Code/User/keybindings.json:
-        create: true
-        force: true
-        path: config/vscode/keybindings.json
-    ~/.config/alacritty/alacritty.toml:
-        create: true
-        path: config/alacritty.toml
-    ~/.config/tmux/tmux.conf:
-        create: true
-        force: true
-        path: config/tmux.conf
+        path: config/.config/**
     # convenience links
     ~/documents: ~/Documents
     ~/downloads: ~/Downloads
-    ~/.config/atuin/config.toml:
-        create: true
-        force: true
-        path: config/atuin/config.toml
 
 # - shell:
 #     # install rust

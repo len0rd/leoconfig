@@ -9,10 +9,12 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "terminal.integrated.scrollback": 5000,
     "workbench.colorTheme": "Night Owl",
-    "workbench.activityBar.visible": false,
     "files.insertFinalNewline": true,
     "editor.indentSize": "tabSize",
     "editor.detectIndentation": true,
     "editor.tabSize": 4,
     "files.trimTrailingWhitespace": true,
+    "workbench.activityBar.location": "hidden",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
 }
