@@ -1,5 +1,5 @@
 [core]
-    excludesFile = ~/.gitignore_global
+    excludesFile = ~/.config/git/gitignore_global
 [color]
 	branch = auto
 	diff = auto
@@ -27,3 +27,8 @@
     # force-with-lease is a safer force push that verifies the remote branch head matches your old local
     # head before pushing (prevents a scenario where someone else pushed to your branch before the rebase)
     pushfl = push --force-with-lease
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

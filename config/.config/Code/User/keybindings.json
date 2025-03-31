@@ -7,7 +7,7 @@
         "when": "viewContainer.workbench.view.explorer.enabled"
     },
     {
-        "key": "shift+alt+a",
+        "key": "ctrl+p",
         "command": "workbench.action.showCommands"
     },
     {
@@ -36,10 +36,6 @@
         "key": "shift+alt+a",
         "command": "-editor.action.blockComment",
         "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+p",
-        "command": "-workbench.action.showCommands"
     },
     {
         "key": "ctrl+pagedown",

@@ -12,8 +12,6 @@
     ~/.bashrc:
         force: true
         path: bashrc
-    ~/.gitconfig: config/git/config
-    ~/.gitignore_global: config/git/ignore_global
     # install all .config files with same dir structure
     ~/.config/:
         glob: true
