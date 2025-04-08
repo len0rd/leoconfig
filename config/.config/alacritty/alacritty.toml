@@ -1,5 +1,11 @@
 live_config_reload = true
 
+[window]
+opacity = 0.9
+blur = true
+startup_mode = "Maximized"
+dynamic_title = false
+
 [bell]
 animation = "EaseOutExpo"
 duration = 0
