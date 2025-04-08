@@ -21,6 +21,11 @@
     ~/documents: ~/Documents
     ~/downloads: ~/Downloads
 
+# install udev rules
+- shell:
+    - command: sudo -n install -D -m644 config/udev/* /etc/udev/rules.d/
+      stderr: true
+
 # - shell:
 #     # install rust
 #     - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
