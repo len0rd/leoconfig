@@ -34,11 +34,6 @@
     "cSpell.spellCheckOnlyWorkspaceFiles": true,
     "cSpell.customDictionaries": {},
     "hediet.vscode-drawio.theme": "atlas",
-    "jenkins.pipeline.linter.connector.crumbUrl": "http://10.10.50.99:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,%22:%22,//crumb)",
-    "jenkins.pipeline.linter.connector.strictssl": false,
-    "jenkins.pipeline.linter.connector.url": "http://10.10.50.99:8080/pipeline-model-converter/validate",
-    "jenkins.pipeline.linter.connector.user": "tmiller",
-    "jenkins.pipeline.linter.connector.pass": "zzv3bHJK4cTzZjzYZ",
     "restructuredtext.linter.disabledLinters": [
         "doc8"
     ],
