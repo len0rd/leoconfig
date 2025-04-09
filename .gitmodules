@@ -2,6 +2,3 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "config/kde/ww"]
-	path = config/kde/ww
-	url = https://github.com/academo/ww-run-raise
