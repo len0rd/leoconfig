@@ -23,7 +23,18 @@
 
 # install udev rules
 - shell:
-    - command: sudo -n install -D -m644 config/udev/* /etc/udev/rules.d/
+    - command: sudo -n install -D -m 644 config/udev/* /etc/udev/rules.d/
+      stderr: true
+
+# install kanata configuration files
+# kanata itself needs to be installed in /usr/bin
+# I installed via their latest github release: https://github.com/jtroo/kanata/releases
+# ie: sudo install -D -m 755 kanata /usr/bin/kanata
+# See here for local running/debugging: https://github.com/jtroo/kanata/wiki/Avoid-using-sudo-on-Linux
+- shell:
+    - command: sudo -n install -D -m 644 config/kanata/kanata.service /etc/systemd/system/
+      stderr: true
+    - command: sudo -n install -D -m 644 config/kanata/laptop_config.kbd /etc/kanata/laptop_config.kbd
       stderr: true
 
 # - shell:

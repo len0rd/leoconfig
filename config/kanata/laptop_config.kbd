@@ -21,11 +21,6 @@
   k (tap-hold $tap-time $hold-time k rmet)
   l (tap-hold $tap-time $hold-time l ralt)
   v (tap-hold $tap-time $hold-time v (layer-toggle vimnav))
-
-  left h
-  down j
-  up k
-  right l
 )
 
 (deflayer base
