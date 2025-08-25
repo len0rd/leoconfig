@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=wl-paste --type text --watch cliphist store
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name=Cliphist
+Comment=Start cliphist text on Plasma session start
