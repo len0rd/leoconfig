@@ -1,8 +1,8 @@
 # Aliases I like to use
 
+alias ll='ls'
 alias ls='ls -GFhlA --color=auto'
 alias la='ls -A'
-alias l='ls -CF'
 alias pssh='ps aux | grep ssh'
 alias jj='java -jar'
 alias clear='clear && delim'

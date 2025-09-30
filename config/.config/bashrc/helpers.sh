@@ -67,10 +67,10 @@ function gconf() {
         git config user.email "len0rd@users.noreply.github.com"
         git config user.name  "len0rd"
         echo_blue "Set git config to Github user"
-    elif [ "$1" == "ara" ]; then
-        git config user.email "tmiller@ara-inc.com"
+    elif [ "$1" == "pv" ]; then
+        git config user.email "tmiller@propervoltage.com"
         git config user.name  "tyler miller"
-        echo_blue "Set git config to ARA BitBucket user"
+        echo_blue "Set git config to ProperVoltage BitBucket user"
     fi
 }
 
@@ -79,9 +79,9 @@ function amend_auth() {
     if [ "$1" == "github" ]; then
         git commit --amend --author "len0rd <len0rd@users.noreply.github.com>" --no-edit
         echo_blue "Amend commit author to Github user"
-    elif [ "$1" == "ara" ]; then
-        git commit --amend --author "tyler miller <tmiller@ara-inc.com>" --no-edit
-        echo_blue "Amend commit author to ARA BitBucket user"
+    elif [ "$1" == "pv" ]; then
+        git commit --amend --author "tyler miller <tmiller@propervoltage.com>" --no-edit
+        echo_blue "Amend commit author to ProperVoltage BitBucket user"
     fi
 }
 
@@ -92,7 +92,7 @@ __gconf() {
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
     # add different arguments to this as a space-seperated list
-    opts="github ara"
+    opts="github pv"
 
     if [[ ${cur} == * ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -142,3 +142,29 @@ function untilfail() {
 function qfind() {
     find $@ 2>&1 | grep -v "Permission denied"
 }
+
+# find and activate python virtual environments in the ~/venv directory
+function venv() {
+    source ~/venvs/$1/bin/activate
+}
+
+# completion for the venv function
+__venv() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    
+    # get list of directories in ~/venvs
+    if [ -d /home/tmiller/venvs ]; then
+        opts=$(l -1 /home/tmiller/venvs 2>/dev/null | sed 's:/$::')
+    else
+        opts=""
+    fi
+
+    if [[ ${cur} == * ]] ; then
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        return 0
+    fi
+}
+complete -F __venv venv

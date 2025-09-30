@@ -1,0 +1,7 @@
+[altium](https://propervoltage.365.altium.com/designs)
+[bitbucket](https://bitbucket.org/zapbatt-dev/workspace/overview/)
+[sharepoint](https://propervoltage.sharepoint.com/sites/Engineering/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FEngineering%2FShared%20Documents%2FTechnical&p=true&ga=1)
+[rippling](https://app.rippling.com/dashboard)
+[gcc options](https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html)
+[gtest docs](https://google.github.io/googletest/)
+[you track](https://propervoltage.youtrack.cloud/projects/PSS02/agiles/170-32)
