@@ -1,15 +1,14 @@
 format = """
-[](#9A348E)\
+[](blue)\
 $status\
 $os\
-$username\
-[](bg:#DA627D fg:#9A348E)\
+[](bg:red fg:blue)\
 $directory\
-[](fg:#DA627D bg:#ADDB67)\
+[](fg:red bg:green)\
 $git_branch\
 $git_commit\
 $git_status\
-[](fg:#ADDB67 bg:#86BBD8)\
+[](fg:green bg:purple)\
 $elixir\
 $elm\
 $golang\
@@ -23,7 +22,7 @@ $rust\
 $scala\
 $conda\
 $python\
-[](fg:#86BBD8) \
+[](fg:purple) \
 """
 
 # Disable the blank line at the start of the prompt
@@ -41,20 +40,20 @@ disabled = false
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
-style = "bg:#9A348E"
+style = "bg:blue"
 disabled = true # Disabled by default
 
 # status of last run command
 [status]
 symbol = '🔴'
 success_symbol = '🟢'
-style = "bg:#9A348E"
+style = "bg:blue"
 format = '[$symbol ]($style)'
 map_symbol = true
 disabled = false
 
 [directory]
-style = "bg:#DA627D fg:#000000"
+style = "bg:red fg:#000000"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -78,7 +77,7 @@ truncation_symbol = "…/"
 
 [c]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
@@ -88,83 +87,84 @@ format = '[ $symbol $context ]($style) $path'
 
 [elixir]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [elm]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#ADDB67 fg:#000000"
+style = "bg:green fg:#000000"
 format = '[ $symbol$branch ]($style)'
 
 [git_commit]
 commit_hash_length = 8
-style = "bg:#ADDB67 fg:#000000"
+style = "bg:green fg:#000000"
 only_detached = true
 tag_disabled = true
 format = "[ 󰜘$hash ]($style)"
 
 [git_status]
-style = "bg:#ADDB67 fg:#000000"
+style = "bg:green fg:#000000"
 format = '[$all_status$ahead_behind]($style)'
 
 [golang]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [gradle]
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [python]
+symbol = " "
 pyenv_version_name = true
-style = "bg:#86BBD8 fg:#000000"
+style = "bg:purple fg:#000000"
 format = '[ $symbol($virtualenv)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [scala]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:purple"
 format = '[ $symbol ($version) ]($style)'
 
 [conda]
 symbol = " "
 ignore_base = false
-style = "bg:#86BBD8 fg:#000000"
+style = "bg:purple fg:#000000"
 format = '[ $symbol($environment)]($style)'
 
 [time]
