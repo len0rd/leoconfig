@@ -1,6 +1,6 @@
 {
     "files.eol": "\n",
-    "editor.fontFamily": "'FiraCode Nerd Font Mono'",
+    "editor.fontFamily": "'Fira Code Retina'",
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     "editor.minimap.enabled": false,
@@ -23,8 +23,8 @@
     "javascript.format.semicolons": "insert",
     "hediet.vscode-drawio.resizeImages": null,
     "window.menuBarVisibility": "toggle",
-    "window.titleBarStyle": "custom",
-    "workbench.activityBar.location": "top",
+    "window.titleBarStyle": "native",
+    "workbench.activityBar.location": "hidden",
     "files.insertFinalNewline": true,
     "cmake.allowUnsupportedPresetsVersions": true,
     "cmake.showOptionsMovedNotification": false,

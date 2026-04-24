@@ -74,5 +74,48 @@
         "key": "shift+alt+left",
         "command": "-editor.action.smartSelect.shrink",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+x",
+        "command": "-cortex-debug.toggleVariableHexFormat",
+        "when": "debugType == 'cortex-debug'"
+    },
+    {
+        "key": "ctrl+shift+pagedown",
+        "command": "-workbench.action.moveEditorRightInGroup"
+    },
+    {
+        "key": "ctrl+shift+pageup",
+        "command": "-workbench.action.moveEditorLeftInGroup"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-editor.action.announceCursorPosition"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "-claude-vscode.focus",
+        "when": "editorTextFocus && !config.claudeCode.useTerminal"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "-claude-vscode.blur",
+        "when": "!config.claudeCode.useTerminal && !editorTextFocus"
     }
 ]
